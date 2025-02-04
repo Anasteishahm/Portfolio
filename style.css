@@ -60,7 +60,6 @@ a:hover {
     font-size: 18px;
     color: #ffffff;
     padding: 16px 48px;
-    display: inline-block;
     background: #909090;
     border-radius: 4px;
     display: inline-flex;
@@ -180,7 +179,7 @@ a:hover {
     padding: 0;
     margin-bottom: 80px;
 
-    font-family: Manrope;
+    font-family: "Manrope", sans-serif;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 1.5px;
@@ -250,7 +249,7 @@ a:hover {
     margin-top: 200px;
 }
 
-.projects__tite {
+.projects__title {
     margin-bottom: 65px;
 }
 
@@ -273,7 +272,7 @@ a:hover {
 }
 
 /*------------
-    CONTAKT
+    CONTACT
 -------------*/
 
 .contact {
