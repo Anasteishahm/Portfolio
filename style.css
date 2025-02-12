@@ -10,6 +10,10 @@ ExtraBolt 800
 загальні стилі
 -------------*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Manrope", sans-serif;
     color: #959595;
@@ -89,10 +93,13 @@ a:hover {
     display: flex;
 }
 
+.burger-menu {
+    display: none;
+}
+
 /*------------
     HEADER
 -------------*/
-
 
 .header {
     padding: 20px 0;
@@ -104,7 +111,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .header__nav {
@@ -120,6 +126,7 @@ a:hover {
 /*------------
     MAIN
 -------------*/
+
 .welcome {
     margin-top: 160px;
 }
@@ -128,9 +135,6 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.welcome__desc {
 }
 
 .welcome__title {
@@ -146,9 +150,6 @@ a:hover {
 .welcome__text {
     width: 395px;
     margin-bottom: 88px;
-}
-
-.welcome__btn {
 }
 
 .welcome__img {
@@ -168,10 +169,6 @@ a:hover {
     margin-top: 140px;
 }
 
-.container {
-
-}
-
 .works__btn {
     display: inline-flex;
     align-items: center;
@@ -189,9 +186,6 @@ a:hover {
     background-color: transparent;
     border: none;
     opacity: 0.7;
-}
-
-.works__icon {
 }
 
 .works__wrapper {
@@ -300,6 +294,7 @@ a:hover {
 .footer {
     padding: 40px 0;
     border-top: 1px solid #696969;
+    margin-top: 100px;
 }
 
 .footer .container {
@@ -310,6 +305,7 @@ a:hover {
 
 .footer__copy {
     font-size: 16px;
+    margin: 0;
 }
 
 .footer__copy span {
@@ -348,6 +344,10 @@ a:hover {
     .work {
         height: 600px;
     }
+
+    .work__name {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 850px) {
@@ -365,6 +365,116 @@ a:hover {
     .welcome__title {
         font-size: 36px;
     }
-
 }
 
+@media (max-width: 700px) {
+    .footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+    .projects__img {
+        width: 100%;
+        height: 360px;
+    }
+
+    .works__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .work:nth-child(odd) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header {
+        position: relative;
+    }
+
+    .burger-menu {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        position: absolute;
+        top: 29px;
+        right: 15px;
+    }
+
+    .burger-menu__icon {
+        height: 24px;
+        width: 30px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .header.header--mobile .header__nav {
+        display: flex;
+        align-self: center;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+        justify-content: center;
+    }
+
+    .header.header--mobile .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .welcome__img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .btn {
+        padding: 16px 20px;
+    }
+
+    .works__btn {
+        margin-bottom: 40px;
+    }
+
+    .work__name {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .projects__title {
+        margin-bottom: 35px;
+    }
+
+    .contact__title {
+        margin-bottom: 12px;
+    }
+
+    .contact .container {
+        max-width: 270px;
+    }
+
+    .contact__text {
+        font-size: 18px;
+    }
+
+    .contact {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    .welcome__title {
+        font-size: 26px;
+    }
+}
